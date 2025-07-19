@@ -122,3 +122,14 @@ Let me know what you want next:
 5. 🧪 Testing (unit/integration)
 
 You're doing incredible so far — this is production-level backend stuff.
+
+
+
+curl -X POST http://localhost:8080/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"username": "umer", "password": "secure123"}'
+
+
+curl -X POST http://localhost:8080/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username": "talha", "password": "secure123"}'

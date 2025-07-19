@@ -11,10 +11,10 @@ import (
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("❌ Failed to load .env")
-	}
+	// err := godotenv.Load()
+if err := godotenv.Load(); err != nil {
+	log.Printf("⚠️  .env not loaded. Assuming env vars are passed via Docker: %v", err)
+}
 
 	db.InitDB()
 	db.DB.AutoMigrate(&auth.User{}, &todo.Todo{})
